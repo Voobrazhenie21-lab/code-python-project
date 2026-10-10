@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "myprofile-entrepreneur"
+version = "2.0.0"
+description = "MyProfile v2.0 — Secure OOP Entrepreneur Profile & Requisites Manager with SHA-256 Integrity Check"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [
+  {name = "Aleksei Zharkou", email = "lyosha.zharkov.98@mail.ru"}
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[tool.setuptools.packages.find]
+include = ["myprofile*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
